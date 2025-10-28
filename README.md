@@ -1,20 +1,38 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# 🥋 Karate Competitions Management System
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+> ✨ An elegant and intuitive platform for managing karate competitions. This application empowers coaches to manage their clubs, add athletes, organize competitions, and track all results in one beautiful place.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## 💫 Key Features
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+- **👥 Athlete Management** - Coaches can easily add and manage their athletes with all important information at their fingertips
+- **🏆 Competition Registration** - Fast and efficient registration of athletes to various competitions with just one click  
+- **📊 Results Tracking** - Athletes and coaches can view all their results in real-time and track progress effortlessly
+- **🎯 Competition Organization** - Coaches can create and organize competitions in their city and manage all the details
+- **💅 Modern & Beautiful Design** - A stunning user experience across all devices with an intuitive interface
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+---
+
+## 🛠️ Tech Stack
+
+### 🎨 Frontend
+- **Angular** - Progressive web application with full flexibility
+- **WebStorm** - The most powerful IDE for development
+- **TypeScript** - Type-safe JavaScript for fewer bugs
+
+### ⚙️ Backend  
+- **ASP.NET Web API** - Fast and reliable RESTful API
+- **.NET Entity Framework** - Elegant database management
+- **SQL Server** - Powerful and secure database
+
+---
+
+## 👯‍♀️ Authors
+
+This application was created  by:
+
+- 💜 **Lamija Hadzimehmedagic** 
+- 💜 **Sara Muranovic**
+
+---
+
+> Built with ❤️ & ✨ for the karate community
