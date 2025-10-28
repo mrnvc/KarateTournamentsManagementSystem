@@ -1,0 +1,149 @@
+# ===========================
+
+# Visual Studio / .NET ignores
+
+# ===========================
+
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.ide
+.idea/
+bin/
+obj/
+publish/
+*.exe
+*.dll
+*.pdb
+*.db
+*.cache
+*.log
+appsettings.*.json
+secrets.json
+Migrations/
+
+# ===========================
+
+# Angular / Node
+
+# ===========================
+
+node_modules/
+dist/
+coverage/
+temp/
+tmp/
+.angular/
+.angular/cache/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+.vscode-test/
+.DS_Store
+Thumbs.db
+
+# Environment and build files
+
+.env
+.env.local
+.env.development
+.env.production
+
+# Angular build artifacts
+
+*.tgz
+*.map
+
+# ===========================
+
+# VS Code settings
+
+# ===========================
+
+.vscode/
+.history/
+*.code-workspace
+*.workspace
+
+# ===========================
+
+# WebStorm / JetBrains IDE
+
+# ===========================
+
+.idea/
+*.iml
+out/
+cmake-build-*/
+
+# WebStorm cache folders
+
+# .idea may contain project settings you want excluded from Git
+
+# (workspace.xml, usage.statistics.xml, etc.)
+
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/httpRequests
+.idea/shelf/
+
+# ===========================
+
+# Microsoft SQL Server / SSMS
+
+# ===========================
+
+*.bak
+*.mdf
+*.ldf
+*.ndf
+*.sqlproj
+*.dacpac
+*.bacpac
+*.rdl.data
+*.rdl.cache
+*.dbmdl
+*.dbproj
+SQLQuery*.sql
+DatabaseBackup/
+*.rptproj
+*.rptproj.user
+
+# ===========================
+
+# OS-specific and temp files
+
+# ===========================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*.lnk
+~$*
+ehthumbs.db
+Desktop.ini
+.DS_Store
+._*
+
+# ===========================
+
+# Backup / zip exceptions
+
+# ===========================
+
+# Allow only zipped DB backups (as per RS1 instructions)
+
+!db-backups/*.zip
+
+# ===========================
+
+# User-specific and misc
+
+# ===========================
+
+*.local
+*.userprefs
+*.bak~
