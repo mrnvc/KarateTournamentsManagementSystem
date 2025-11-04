@@ -1,0 +1,6 @@
+@KTMS.API_HostAddress = http://localhost:5159
+
+GET {{KTMS.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

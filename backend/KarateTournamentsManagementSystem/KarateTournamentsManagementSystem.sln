@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTMS.API", "KTMS.API\KTMS.API.csproj", "{65298BA9-B963-4A55-A7F0-D508EB0791D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTMS.Application", "KTMS.Application\KTMS.Application.csproj", "{4D6353B2-5C65-4B86-97C1-B9BF690F3DEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTMS.Infrastructure", "KTMS.Infrastructure\KTMS.Infrastructure.csproj", "{BCB2DEB3-6CA1-4391-B34E-8153845B0D46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTMS.Domain", "KTMS.Domain\KTMS.Domain.csproj", "{43B412B3-B6AE-4405-B89E-6309C4BE1D71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65298BA9-B963-4A55-A7F0-D508EB0791D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65298BA9-B963-4A55-A7F0-D508EB0791D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65298BA9-B963-4A55-A7F0-D508EB0791D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65298BA9-B963-4A55-A7F0-D508EB0791D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D6353B2-5C65-4B86-97C1-B9BF690F3DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D6353B2-5C65-4B86-97C1-B9BF690F3DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D6353B2-5C65-4B86-97C1-B9BF690F3DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D6353B2-5C65-4B86-97C1-B9BF690F3DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCB2DEB3-6CA1-4391-B34E-8153845B0D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB2DEB3-6CA1-4391-B34E-8153845B0D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB2DEB3-6CA1-4391-B34E-8153845B0D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB2DEB3-6CA1-4391-B34E-8153845B0D46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43B412B3-B6AE-4405-B89E-6309C4BE1D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43B412B3-B6AE-4405-B89E-6309C4BE1D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43B412B3-B6AE-4405-B89E-6309C4BE1D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43B412B3-B6AE-4405-B89E-6309C4BE1D71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {852F56C6-5D36-4CD3-AD6D-18CF35E94BEA}
+	EndGlobalSection
+EndGlobal
