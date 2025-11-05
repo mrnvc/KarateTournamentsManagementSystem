@@ -1,3 +1,5 @@
+using KTMS.Infrastructure.Database;
+using Microsoft.EntityFrameworkCore;
 
 namespace KTMS.API
 {
@@ -7,8 +9,13 @@ namespace KTMS.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            //Register DbContext
+            builder.Services.AddDbContext<DatabaseContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+                sqlOptions => sqlOptions.MigrationsAssembly("KTMS.Infrastructure"))
+            );
 
+            // Add services to the container.
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
