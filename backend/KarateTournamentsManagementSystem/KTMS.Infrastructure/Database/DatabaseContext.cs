@@ -1,9 +1,10 @@
-﻿using KTMS.Domain.Entities;
+﻿using KTMS.Application.Abstractions;
+using KTMS.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace KTMS.Infrastructure.Database
 {
-    public class DatabaseContext : DbContext
+    public class DatabaseContext : DbContext, IAppDbContext
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options)
