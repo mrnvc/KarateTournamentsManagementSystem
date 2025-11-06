@@ -21,7 +21,6 @@ publish/
 *.log
 appsettings.*.json
 secrets.json
-Migrations/
 
 # ===========================
 
