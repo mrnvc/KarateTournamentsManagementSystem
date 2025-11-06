@@ -18,7 +18,7 @@
         //Collections
         public ICollection<Organizer> Organizers { get; set; } = new List<Organizer>();
         public ICollection<TournamentJudge> TournamentJudges { get; set; } = new List<TournamentJudge>();
-        public ICollection<Application> Applications { get; set; } = new List<Application>();
+        public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
         public ICollection<Notification> Notifications { get; set; } = new List<Notification>();
         public ICollection<Bracket> Brackets { get; set; } = new List<Bracket>();
         public ICollection<Result> Results { get; set; } = new List<Result>();

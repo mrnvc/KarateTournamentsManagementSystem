@@ -16,6 +16,6 @@
         //Collections
         public ICollection<Result> Results { get; set; } = new List<Result>();
         public ICollection<Schedule> Schedules { get; set; } = new List<Schedule>();
-        public ICollection<Application> Applications { get; set; } = new List<Application>();
+        public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
     }
 }

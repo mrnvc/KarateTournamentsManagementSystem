@@ -10,7 +10,7 @@ namespace KTMS.Infrastructure.Database
         {
         }
 
-        public DbSet<Application> Applications { get; set; }
+        public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Belt> Belts { get; set; }
         public DbSet<Bracket> Brackets { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -40,36 +40,36 @@ namespace KTMS.Infrastructure.Database
             base.OnModelCreating(modelBuilder);
 
             // ====================
-            // APPLICATIONS
+            // ENROLLMENTS
             // ====================
-            modelBuilder.Entity<Application>()
-                .HasOne(a => a.Contestant)
-                .WithMany(c => c.Applications)
-                .HasForeignKey(a => a.ContestantId)
+            modelBuilder.Entity<Enrollment>()
+                .HasOne(e => e.Contestant)
+                .WithMany(c => c.Enrollments)
+                .HasForeignKey(e => e.ContestantId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Application>()
-                .HasOne(a => a.Category)
-                .WithMany(c => c.Applications)
-                .HasForeignKey(a => a.CategoryId)
+            modelBuilder.Entity<Enrollment>()
+                .HasOne(e => e.Category)
+                .WithMany(c => c.Enrollments)
+                .HasForeignKey(e => e.CategoryId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Application>()
-                .HasOne(a => a.Tournament)
-                .WithMany(t => t.Applications)
-                .HasForeignKey(a => a.TournamentId)
+            modelBuilder.Entity<Enrollment>()
+                .HasOne(e => e.Tournament)
+                .WithMany(t => t.Enrollments)
+                .HasForeignKey(e => e.TournamentId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Application>()
-                .HasOne(a => a.Discipline)
-                .WithMany(d => d.Applications)
-                .HasForeignKey(a => a.DisciplineId)
+            modelBuilder.Entity<Enrollment>()
+                .HasOne(e => e.Discipline)
+                .WithMany(d => d.Enrollments)
+                .HasForeignKey(e => e.DisciplineId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Application>()
-                .HasMany(a => a.Payments)
-                .WithOne(p => p.Application)
-                .HasForeignKey(p => p.ApplicationId)
+            modelBuilder.Entity<Enrollment>()
+                .HasMany(e => e.Payments)
+                .WithOne(p => p.Enrollment)
+                .HasForeignKey(p => p.EnrollmentId)
                 .OnDelete(DeleteBehavior.Cascade);
 
 
@@ -145,9 +145,9 @@ namespace KTMS.Infrastructure.Database
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Category>()
-                .HasMany(c => c.Applications)
-                .WithOne(a => a.Category)
-                .HasForeignKey(a => a.CategoryId)
+                .HasMany(c => c.Enrollments)
+                .WithOne(e => e.Category)
+                .HasForeignKey(e => e.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
 
@@ -263,9 +263,9 @@ namespace KTMS.Infrastructure.Database
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Contestant>()
-                .HasMany(c => c.Applications)
-                .WithOne(a => a.Contestant)
-                .HasForeignKey(a => a.ContestantId)
+                .HasMany(c => c.Enrollments)
+                .WithOne(e => e.Contestant)
+                .HasForeignKey(e => e.ContestantId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Contestant>()
@@ -307,9 +307,9 @@ namespace KTMS.Infrastructure.Database
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Discipline>()
-                .HasMany(d => d.Applications)
-                .WithOne(a => a.Discipline)
-                .HasForeignKey(a => a.DisciplineId)
+                .HasMany(d => d.Enrollments)
+                .WithOne(e => e.Discipline)
+                .HasForeignKey(e => e.DisciplineId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Discipline>()
@@ -403,9 +403,9 @@ namespace KTMS.Infrastructure.Database
             // PAYMENTS
             // ====================
             modelBuilder.Entity<Payment>()
-                .HasOne(p => p.Application)
-                .WithMany(a => a.Payments)
-                .HasForeignKey(p => p.ApplicationId)
+                .HasOne(p => p.Enrollment)
+                .WithMany(e => e.Payments)
+                .HasForeignKey(p => p.EnrollmentId)
                 .OnDelete(DeleteBehavior.Cascade);
 
 
@@ -519,9 +519,9 @@ namespace KTMS.Infrastructure.Database
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Tournament>()
-                .HasMany(t => t.Applications)
-                .WithOne(a => a.Tournament)
-                .HasForeignKey(a => a.TournamentId)
+                .HasMany(t => t.Enrollments)
+                .WithOne(e => e.Tournament)
+                .HasForeignKey(e => e.TournamentId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Tournament>()
@@ -637,6 +637,8 @@ namespace KTMS.Infrastructure.Database
                 .WithOne(o => o.User)
                 .HasForeignKey(o => o.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Enrollment>().ToTable("Enrollments");
         }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
