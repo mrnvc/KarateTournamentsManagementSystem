@@ -1,14 +1,17 @@
+using KTMS.Application.Common;
 using KTMS.Infrastructure.Common;
 using KTMS.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace KTMS.API
 {
-    public class Program
+    public partial class Program
     {
+        
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+           var builder = WebApplication.CreateBuilder(args);
 
             //Register DbContext
             builder.Services.AddDbContext<DatabaseContext>(options =>
@@ -21,7 +24,12 @@ namespace KTMS.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            // Add Infrastructure Services
             builder.Services.AddInfrastructure(builder.Configuration);
+
+            //Add Application
+            builder.Services.AddApplication();
 
             var app = builder.Build();
 
