@@ -1,6 +1,12 @@
 ﻿using KTMS.Application.Catalog.Clubs.Commands.AddClub;
+using KTMS.Application.Catalog.Clubs.Commands.DeleteClub;
+using KTMS.Application.Catalog.Clubs.Commands.UpdateClub;
+using KTMS.Application.Catalog.Clubs.GetClubs.GetClubs;
+using KTMS.Application.Catalog.Clubs.GetClubs.GetClubsById;
+using KTMS.Application.Catalog.Users.Queries.GetUsers;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Formats.Tar;
 
 namespace KTMS.API.Controllers
 {
@@ -21,5 +27,45 @@ namespace KTMS.API.Controllers
             var result = await _mediator.Send(command);
             return Ok(result);
         }
+
+        [HttpGet("GetClubs")]
+        public async Task<IActionResult> GetClubs()
+        {
+            var query = new GetClubsQuery();
+            var result = await _mediator.Send(query);
+
+            return Ok(result);
+        }
+
+        [HttpGet("GetClubsById/{id}")]
+        public async Task<IActionResult> GetClubsById(int id)
+        {
+            var query = new GetClubsByIdQuery(id);
+
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
+
+        [HttpPut("UpdateClub")]
+        public async Task<IActionResult> UpdateClub(int id, [FromBody] UpdateClubCommand command)
+        {
+            if (id != command.Id)
+            {
+                return BadRequest("ID does not match");
+            }
+
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        [HttpDelete("DeleteClub")]
+        public async Task<IActionResult> DeleteClub(int id)
+        {
+            var command = new DeleteClubCommand { Id = id };
+
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
     }
 }
