@@ -1,11 +1,11 @@
 ﻿using KTMS.Application.Abstractions;
-using KTMS.Application.Catalog.Users.Queries.GetUsers;
+using KTMS.Application.Catalog.Users.DTOs;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace KTMS.Application.Catalog.Users.Queries.GetUsersById
 {
-    public class GetUsersByIdHandler :IRequestHandler<GetUsersByIdQuery, UserDto>
+    public class GetUsersByIdHandler : IRequestHandler<GetUsersByIdQuery, UserDto>
     {
         private readonly IAppDbContext _dbContext;
 

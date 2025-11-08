@@ -37,13 +37,26 @@ namespace KTMS.Application.Catalog.Users.Commands.UpdateUser
             if (!genderExists)
                 throw new Exception("Gender does not exist.");
 
-            user.Name = request.Name;
-            user.Surname = request.Surname;
-            user.Email = request.Email;
-            user.PhoneNumber = request.PhoneNumber;
-            user.GenderId = request.GenderId;
-            user.RoleId = request.RoleId;
-            user.CityId = request.CityId;
+            if (!string.IsNullOrEmpty(request.Name))
+                user.Name = request.Name;
+
+            if (!string.IsNullOrEmpty(request.Surname))
+                user.Surname = request.Surname;
+
+            if (!string.IsNullOrEmpty(request.Email))
+                user.Email = request.Email;
+
+            if (!string.IsNullOrEmpty(request.PhoneNumber))
+                user.PhoneNumber = request.PhoneNumber;
+
+            if (request.CityId.HasValue)
+                user.CityId = request.CityId.Value;
+
+            if (request.GenderId.HasValue)
+                user.GenderId = request.GenderId.Value;
+
+            if (request.RoleId.HasValue)
+                user.RoleId = request.RoleId.Value;
 
             await _dbContext.SaveChangesAsync(cancellationToken);
 

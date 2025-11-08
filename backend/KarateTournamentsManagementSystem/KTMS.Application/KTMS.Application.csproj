@@ -24,4 +24,8 @@
     <ProjectReference Include="..\KTMS.Domain\KTMS.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Catalog\Clubs\Queries\" />
+  </ItemGroup>
+
 </Project>
