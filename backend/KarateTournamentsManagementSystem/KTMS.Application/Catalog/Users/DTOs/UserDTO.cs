@@ -1,6 +1,6 @@
 ﻿using KTMS.Domain.Entities;
 
-namespace KTMS.Application.Catalog.Users.Queries.GetUsers
+namespace KTMS.Application.Catalog.Users.DTOs
 {
     public class UserDto
     {
@@ -13,8 +13,8 @@ namespace KTMS.Application.Catalog.Users.Queries.GetUsers
         public string Username { get; set; }
         public DateTime RegistrationDate { get; set; }
         public bool Status { get; set; }
-        public string? Role { get; set; }
-        public string? City { get; set; }
-        public string? Gender { get; set; }
+        public string Role { get; set; }
+        public string City { get; set; }
+        public string Gender { get; set; }
     }
 }
