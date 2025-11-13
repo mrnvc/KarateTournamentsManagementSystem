@@ -1,4 +1,4 @@
-using KTMS.Application.Common;
+using KTMS.Application;
 using KTMS.Infrastructure.Common;
 using KTMS.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;

@@ -1,12 +1,7 @@
 ﻿using FluentValidation;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Snagged.Application.Commom.Behaviours
+namespace KTMS.Application.Common.Behaviours
 {
     public sealed class ValidationBehavior<TRequest, TResponse>
      : IPipelineBehavior<TRequest, TResponse>

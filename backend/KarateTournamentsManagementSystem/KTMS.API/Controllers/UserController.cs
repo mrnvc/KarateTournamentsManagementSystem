@@ -1,8 +1,8 @@
-﻿using KTMS.Application.Catalog.Users.Commands.AddUser;
-using KTMS.Application.Catalog.Users.Commands.DeleteUser;
-using KTMS.Application.Catalog.Users.Commands.UpdateUser;
-using KTMS.Application.Catalog.Users.Queries.GetUsers;
-using KTMS.Application.Catalog.Users.Queries.GetUsersById;
+﻿using KTMS.Application.Modules.Users.Commands.AddUser;
+using KTMS.Application.Modules.Users.Commands.DeleteUser;
+using KTMS.Application.Modules.Users.Commands.UpdateUser;
+using KTMS.Application.Modules.Users.Queries.GetUsers;
+using KTMS.Application.Modules.Users.Queries.GetUsersById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
