@@ -1,9 +1,8 @@
-﻿using KTMS.Application.Catalog.Clubs.Commands.AddClub;
-using KTMS.Application.Catalog.Clubs.Commands.DeleteClub;
-using KTMS.Application.Catalog.Clubs.Commands.UpdateClub;
-using KTMS.Application.Catalog.Clubs.GetClubs.GetClubs;
-using KTMS.Application.Catalog.Clubs.GetClubs.GetClubsById;
-using KTMS.Application.Catalog.Users.Queries.GetUsers;
+﻿using KTMS.Application.Modules.Clubs.Commands.AddClub;
+using KTMS.Application.Modules.Clubs.Commands.DeleteClub;
+using KTMS.Application.Modules.Clubs.Commands.UpdateClub;
+using KTMS.Application.Modules.Clubs.GetClubs.GetClubs;
+using KTMS.Application.Modules.Clubs.GetClubs.GetClubsById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Formats.Tar;
