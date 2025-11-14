@@ -6,7 +6,6 @@ using System.Reflection;
 
 namespace KTMS.Application
 {
-
     public static class DependencyInjection
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
