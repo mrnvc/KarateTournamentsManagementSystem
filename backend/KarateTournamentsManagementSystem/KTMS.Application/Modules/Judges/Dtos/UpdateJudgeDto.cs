@@ -2,7 +2,7 @@
 {
     public class UpdateJudgeDto
     {
-        public string License { get; set; }
+        public string? License { get; set; }
         public string? Rank { get; set; }
     }
 }

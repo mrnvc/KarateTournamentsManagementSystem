@@ -19,8 +19,8 @@ namespace KTMS.Application.Modules.Clubs.Queries.GetClubs
             return await _dbContext.Clubs
                         .Include(c => c.City)
                         .Include(c => c.Country)
-                       .Select(c => new ClubDto
-                       {
+                        .Select(c => new ClubDto
+                        {
                            Name = c.Name,
                            City = c.City != null ? c.City.Name : "City does not exist!",
                            Country = c.Country != null ? c.Country.Name : "Country does not exist!",
@@ -28,8 +28,8 @@ namespace KTMS.Application.Modules.Clubs.Queries.GetClubs
                            Email = c.Email,
                            PhoneNumber = c.PhoneNumber,
                            Status = c.Status
-                       })
-                       .ToListAsync(cancellationToken);
+                        })
+                        .ToListAsync(cancellationToken);
         }
     }
 }
