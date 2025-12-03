@@ -1,10 +1,14 @@
 ﻿using KTMS.Application.Modules.Judges.Commands.CreateJudge;
 using KTMS.Application.Modules.Judges.Commands.DeleteJudge;
 using KTMS.Application.Modules.Judges.Commands.UpdateJudge;
+using KTMS.Application.Modules.Judges.Dtos;
 using KTMS.Application.Modules.Judges.Queries.GetJudges;
 using KTMS.Application.Modules.Judges.Queries.GetJudgesById;
+using KTMS.Application.Modules.Judges.Queries.GetJudgesFiltered;
+using KTMS.Application.Modules.Judges.Queries.GetPagedJudges;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.Contracts;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace KTMS.API.Controllers
@@ -68,5 +72,18 @@ namespace KTMS.API.Controllers
             return Ok(result);
         }
 
+        [HttpGet("GetJudgesFiltered")]
+        public async Task<ActionResult<List<JudgeFilterDto>>> GetJudgesFiltered([FromQuery] GetJudgesFilteredQuery query)
+        {
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
+
+        [HttpGet("Paged")]
+        public async Task<ActionResult<List<JudgeDto>>> GetPagedJudges([FromQuery] GetPagedJudgesQuery query)
+        {
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
     }
 }

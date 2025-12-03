@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KTMS.Domain\KTMS.Domain.csproj" />
+    <ProjectReference Include="..\KTMS.Shared\KTMS.Shared.csproj" />
   </ItemGroup>
 
 </Project>
