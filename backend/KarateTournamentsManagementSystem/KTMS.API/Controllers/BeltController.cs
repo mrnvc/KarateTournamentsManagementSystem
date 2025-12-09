@@ -1,5 +1,5 @@
-﻿using KTMS.Application.Modules.Belts.Query.GetBelts;
-using KTMS.Application.Modules.Belts.Query.GetBeltsById;
+﻿using KTMS.Application.Modules.Belts.Queries.GetBelts;
+using KTMS.Application.Modules.Belts.Queries.GetBeltsById;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

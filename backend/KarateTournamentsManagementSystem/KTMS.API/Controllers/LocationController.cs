@@ -1,5 +1,5 @@
-﻿using KTMS.Application.Modules.Locations.Query.GetLocations;
-using KTMS.Application.Modules.Locations.Query.GetLocationsById;
+﻿using KTMS.Application.Modules.Locations.Queries.GetLocations;
+using KTMS.Application.Modules.Locations.Queries.GetLocationsById;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
