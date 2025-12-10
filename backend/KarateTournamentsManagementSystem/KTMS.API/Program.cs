@@ -1,6 +1,8 @@
 using KTMS.Application;
+using KTMS.Application.Abstractions;
 using KTMS.Infrastructure.Common;
 using KTMS.Infrastructure.Database;
+using KTMS.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -18,6 +20,12 @@ namespace KTMS.API
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
                 sqlOptions => sqlOptions.MigrationsAssembly("KTMS.Infrastructure"))
             );
+
+            //IAppDbContext so DI can resolve it in handlers
+            builder.Services.AddScoped<IAppDbContext>(provider => provider.GetService<DatabaseContext>());
+
+            //Register JWT Service for IJwtService  
+            builder.Services.AddScoped<IJwtService, JwtService>();
 
             // Add services to the container.
             builder.Services.AddControllers();

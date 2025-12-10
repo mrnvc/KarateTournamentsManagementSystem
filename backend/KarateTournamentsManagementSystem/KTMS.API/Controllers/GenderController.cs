@@ -1,4 +1,4 @@
-﻿using KTMS.Application.Modules.Genders.Query.GetGenders;
+﻿using KTMS.Application.Modules.Genders.Queries.GetGenders;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

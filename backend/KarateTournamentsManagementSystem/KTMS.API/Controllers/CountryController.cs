@@ -1,5 +1,5 @@
-﻿using KTMS.Application.Modules.Countries.Query.GetCountries;
-using KTMS.Application.Modules.Countries.Query.GetCountriesById;
+﻿using KTMS.Application.Modules.Countries.Queries.GetCountries;
+using KTMS.Application.Modules.Countries.Queries.GetCountriesById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
