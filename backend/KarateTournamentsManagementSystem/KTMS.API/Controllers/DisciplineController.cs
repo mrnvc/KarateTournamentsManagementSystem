@@ -1,6 +1,5 @@
-﻿using KTMS.Application.Modules.Discipline.Query.GetDisciplines;
+﻿using KTMS.Application.Modules.Discipline.Queries.GetDisciplines;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KTMS.API.Controllers

@@ -1,5 +1,5 @@
-﻿using KTMS.Application.Modules.Categories.Query.GetCategories;
-using KTMS.Application.Modules.Categories.Query.GetCategoriesById;
+﻿using KTMS.Application.Modules.Categories.Queries.GetCategories;
+using KTMS.Application.Modules.Categories.Queries.GetCategoriesById;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

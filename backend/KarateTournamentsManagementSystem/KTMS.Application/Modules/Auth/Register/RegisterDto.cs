@@ -1,0 +1,16 @@
+﻿namespace KTMS.Application.Modules.Auth.Register
+{
+    public class RegisterDto
+    {
+        public int RoleId { get; set; }
+        public int CityId { get; set; }
+        public int GenderId { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string PhoneNumber { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
+}

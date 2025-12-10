@@ -1,4 +1,4 @@
-﻿using KTMS.Application.Modules.Roles.Query.GetRoles;
+﻿using KTMS.Application.Modules.Roles.Queries.GetRoles;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
