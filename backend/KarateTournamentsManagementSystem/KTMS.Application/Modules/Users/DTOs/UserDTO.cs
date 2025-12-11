@@ -9,7 +9,7 @@ namespace KTMS.Application.Modules.Users.DTOs
         public string Surname { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public DateOnly DateOfBirth { get; set; }
         public string Username { get; set; }
         public DateTime RegistrationDate { get; set; }
         public bool Status { get; set; }
