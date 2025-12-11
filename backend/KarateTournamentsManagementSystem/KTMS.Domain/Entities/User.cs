@@ -10,7 +10,7 @@
         public required string Surname { get; set; }
         public required string PhoneNumber { get; set; }
         public required string Email { get; set; }
-        public required DateTime DateOfBirth { get; set; }
+        public required DateOnly DateOfBirth { get; set; }
         public required string Username { get; set; }
         public required string Password { get; set; }
         public DateTime? RegistrationDate { get; set; }
